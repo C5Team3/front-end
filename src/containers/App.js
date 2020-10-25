@@ -1,11 +1,9 @@
-import React from "react";
-import { GlobalStyle } from "../components/styles/globals";
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <GlobalStyle />
-      <h1>Music App</h1>
+      Music App
     </div>
   );
 }
