@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   PageContainer,
   MainContainer,
@@ -12,8 +12,10 @@ import {
   StatsButton,
 } from "../../components/Buttons";
 import UserCard from "../../components/UserCard";
+import { Context } from "../../utils/Context";
 
 const Settings = () => {
+  const { setIsAuth } = useContext(Context);
   return (
     <PageContainer>
       <TopBar>
@@ -26,7 +28,7 @@ const Settings = () => {
         <SettingsButtonsBox>
           <ChangePassButton />
           <StatsButton />
-          <SingOutButton />
+          <SingOutButton onClick={() => setIsAuth(false)} />
         </SettingsButtonsBox>
       </MainContainer>
     </PageContainer>
